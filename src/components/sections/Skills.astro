@@ -1,51 +1,30 @@
 ---
 import Section from "../Section.astro"
-import HTML from "@/icons/html.astro"
-import CSS from "@/icons/css.astro"
-import JavaScript from "@/icons/javascript.astro"
-import TypeScript from "@/icons/type.astro"
-import React from "@/icons/react.astro"
-import Node from "@/icons/node.astro"
-import MySQL from "@/icons/sql.astro"
-import Git from "@/icons/git.astro"
-import GitHub from "@/icons/GitHub.astro"
-import Tailwind from "@/icons/tailwind.astro"
-import Next from "@/icons/next.astro"
-import { skills } from "@cv"
-import Swift from "@/icons/swift.astro"
-import SwiftUI from "@/icons/swiftui.astro"
-import Kotlin from "@/icons/kotlin.astro"
-import Flutter from "@/icons/flutter.astro"
 
-const SKILLS_ICONS: Record<string, any> = {
-  HTML,
-  CSS,
-  JavaScript,
-  TypeScript,
-  React,
-  Node,
-  MySQL,
-  Git,
-  GitHub,
-  Next,
-  Tailwind,
-  Swift,
-  SwiftUI,
-  Kotlin,
-  Flutter,
-}
+import { certificates } from "@cv"
 ---
 
-<Section title="Habilidades">
+<Section title="Certifications & training">
   <ul>
     {
-      skills.map(({ name }) => {
-        const iconName = name === "Next.js" ? "Next" : name
-        const Icon = SKILLS_ICONS[iconName]
+      certificates.map(({ name, date, issuer }) => {
+       
 
         return (
           <li>
-            {Icon && <Icon />} <span>{name}</span>
+            <article>
+              <header>
+                <div>
+                  <h3>{issuer}</h3>
+                </div>
+
+                <time>{date}</time>
+              </header>
+
+              <footer>
+                <p>{name}</p>
+              </footer>
+            </article>
           </li>
         )
       })
@@ -55,20 +34,41 @@ const SKILLS_ICONS: Record<string, any> = {
 
 <style>
   ul {
-    display: inline-flex;
-    gap: 8px;
-    flex-wrap: wrap;
+    display: flex;
+    flex-direction: column;
+    gap: 32px;
   }
 
-  li {
-    align-items: center;
-    background: #eee;
-    border-radius: 6px;
-    color: black;
-    display: flex;
-    font-size: 0.8rem;
+  article h3 {
     font-weight: 500;
-    gap: 4px;
-    padding: 0.2rem 0.6rem;
+    color: #111;
+  }
+
+  header {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    margin-bottom: 4px;
+  }
+
+  time {
+    color: #555;
+    font-size: 0.85rem;
+    min-width: 102px;
+  }
+  footer {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 6px;
+    font-size: 0.4rem;
+  }
+  footer span {
+    color: #111;
+    font-size: 0.7rem;
+  }
+  @media (width <= 700px) {
+    time {
+      text-align: right;
+    }
   }
 </style>

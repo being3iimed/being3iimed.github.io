@@ -4,10 +4,10 @@ import Section from "../Section.astro"
 import { education } from "@cv"
 ---
 
-<Section title="Educación">
+<Section title="Education">
   <ul>
     {
-      education.map(({ institution, startDate, endDate, area }) => {
+      education.map(({ institution, courses, startDate, endDate, area }) => {
         const startYear = new Date(startDate).getFullYear()
         const endYear =
           endDate != null ? new Date(endDate).getFullYear() : "Actual"
@@ -25,7 +25,13 @@ import { education } from "@cv"
               </header>
 
               <footer>
+              <div>
                 <p>{area}</p>
+                <p> Relevent coursework: 
+                {courses.map((courses) => {
+                    return <span>{courses}</span>
+                  })}</p>
+              </div>
               </footer>
             </article>
           </li>
@@ -59,7 +65,16 @@ import { education } from "@cv"
     font-size: 0.85rem;
     min-width: 102px;
   }
-
+  footer {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 6px;
+    font-size: 0.4rem;
+  }
+  footer span {
+    color: #111;
+    font-size: 0.7rem;
+  }
   @media (width <= 700px) {
     time {
       text-align: right;
