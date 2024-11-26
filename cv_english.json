@@ -48,7 +48,7 @@
       "endDate": "2023-06-01",
       "summary": "Collaborated with analysts to create PDD with BPMN flowcharts, set up GLPI container with Docker, and developed UiPath automation for supervision process.",
       "highlights": [
-        "Configured and deployed a GLPI container using Docker/Docker Compose on Windows (Ubuntu on WSL2).",
+        "Configured and deployed a GLPI container using Docker/Docker Compose on Windows (WSL2).",
         "Developed and tested UiPath-based automation solutions to streamline supervision processes."
       ]
     },
