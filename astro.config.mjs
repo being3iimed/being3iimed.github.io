@@ -2,5 +2,5 @@ import { defineConfig } from 'astro/config'
 
 export default defineConfig({
   site: 'https://being3iimed.github.io',
-  publicDir: "public"
+  base: "being3iimed.github.io"
 })
