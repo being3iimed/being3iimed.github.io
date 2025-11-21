@@ -42,7 +42,9 @@ import { work } from "@cv"
                 </header>
 
                 <footer>
-                  <p>{summary}</p><br>
+                  <p class="summary-with-highlights" data-highlights={highlights.join('\n• ')}>
+                    {summary}
+                  </p>
                 </footer>
               </article>
             </li>
@@ -103,7 +105,7 @@ import { work } from "@cv"
     background-color: #333;
     color: #fff;
     font-size: .75rem;
-    font-family: Menlo, Monaco, Lucida Console, "Courier New", monospace;;
+    font-family: Menlo, Monaco, Lucida Console, "Courier New", monospace;
     position: absolute;
     padding: .2rem .5rem;
     bottom: -1.4rem;
@@ -121,9 +123,45 @@ import { work } from "@cv"
     position: relative;
   }
 
+  .summary-with-highlights {
+    cursor: help;
+    position: relative;
+  }
+
+  .summary-with-highlights:hover:after {
+    content: "• " attr(data-highlights);
+    background-color: #333;
+    color: #fff;
+    font-size: .85rem;
+    line-height: 1.5;
+    position: absolute;
+    padding: 1rem;
+    top: 100%;
+    left: 0;
+    margin-top: 0.5rem;
+    white-space: pre-wrap;
+    max-width: 500px;
+    box-shadow: 2px 2px 8px rgba(0, 0, 0, 0.3);
+    opacity: 1;
+    border: 1px solid #111111;
+    z-index: 99999;
+    visibility: visible;
+    border-radius: 6px;
+    transition: all 0.2s ease-in-out;
+  }
+
+  footer p {
+    margin: 0;
+  }
+
   @media (width <= 700px) {
     time {
       text-align: right;
+    }
+    
+    .summary-with-highlights:hover:after {
+      max-width: 90vw;
+      left: -10px;
     }
   }
 </style>
