@@ -6,7 +6,7 @@
     "email": "imed.kouki@ensi-uma.tn",
     "phone": "+216 93 805 433",
     "url": "https://github.com/being3iimed",
-    "summary": "Experienced in designing and implementing automation workflows that streamline business operations. Currently engineering process automation solutions using the UiPath Platform and Microsoft Power Automate. Concurrently working as a Master's Thesis Researcher on agentic approaches for BPMN process model generation through multi-agent systems and prompt engineering.",
+    "summary": "Designing and implementing process automation solutions using the UiPath Platform and Microsoft Power Automate that streamline business operations. Concurrently working as a Master's Thesis Researcher on agentic approaches for BPMN process model generation through multi-agent systems and prompt engineering.",
     "location": {
       "address": "",
       "postalCode": "",
@@ -89,12 +89,12 @@
       "endDate": "2025-10-01",
       "score": "",
       "courses": [
-        "Research focus: Agentic BPMN model generation, multi-agent systems, and text-to-model synthesis",
-        "Machine Learning",
-        "Deep Learning",
-        "Probability & Statistics",
-        "Expert Systems",
-        "Computer Vision",
+        "Machine Learning, ",
+        "Formal Logic, ",
+        "Deep Learning, ",
+        "Probability & Statistics, ",
+        "Expert Systems, ",
+        "Computer Vision, ",
         "Signal Processing"
       ]
     },
@@ -107,11 +107,11 @@
       "endDate": "2023",
       "score": "",
       "courses": [
-        "Object-oriented Programming",
-        "Software Architecture",
-        "Networking",
-        "OS",
-        "Big Data",
+        "Object-oriented Programming, ",
+        "Software Architecture, ",
+        "Networking, ",
+        "OS, ",
+        "Big Data, ",
         "SOA"
       ]
     }
